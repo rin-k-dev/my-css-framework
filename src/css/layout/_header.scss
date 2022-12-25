@@ -1,0 +1,170 @@
+@use '../variables/variables' as variables;
+
+.l-header {
+    width: 100%;
+    position: sticky;
+    z-index: 10;
+    align-items: center;
+    top: -100px;
+    .l-header__container {
+        position: sticky;
+        background-color: var(--color-white);
+        height: 200px;
+        h2 {
+            display: none;
+        }
+        .l-header__logo {
+            display: flex;
+            margin-top: 5px;
+            img {
+                width: 60px;
+                height: 60px;
+            }
+            h1 {
+                color: var(--color-brown);
+                font-size: clamp(var(--f1), 0.8169rem + 1.3146vw, var(--f3));
+                margin-top: 20px;
+            }
+        }
+        .l-header__message {
+            display: none;
+        }
+        .l-header__contact {
+            .l-header__address {
+                font-size: clamp(var(--f-1), 0.8310rem + 0.1878vw, var(--f0));
+                color: var(--color-brown);
+                margin-top: 8px;
+                text-align: center;
+            }
+        }
+        .l-header__text {
+            font-size: var(--f-1);
+            color: var(--color-black);
+            margin-top: 8px;
+            text-align: center;
+        }
+    }
+    
+    .l-header__nav--button {
+        z-index: 90;
+        position: absolute;
+        top: 25px;
+        right: 15px;
+        width: 35px;
+        height: 20px;
+        cursor: pointer;
+        span, span::after {
+            display: inline-block;
+            width: 35px;
+            height: 3px;
+            background-color: var(--color-brown);
+            transition: all .4s;
+        }
+        span::after {
+            content: '';
+            margin-top: 20px;
+        }
+    }
+
+    .l-header__nav--container {
+        background: center/cover url("../images/bg-sp.png") no-repeat;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: -200vh;
+        transition: all 0.6s;
+        .l-header__nav--sp {
+            color: var(--color-black);
+            font-size: var(--f2);
+            margin-top: 120px;
+            margin-bottom: 60px;
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+        }
+        .l-header__message--sp {
+            color: var(--color-black);
+            font-size: var(--f0);
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+    
+    #js-hamburger.is-active {
+        span {
+            transform-origin:0 0;
+            transform: rotate(45deg) translateY(-15px);
+        }
+        span::after {
+            transform-origin:0 0;
+            transform: rotate(-90deg) translateY(15px);
+        }
+    }
+    #js-nav.is-active {
+        top: 0;
+    }
+
+    @media screen and (min-width: variables.$breakpoint) {
+        top: -200px;
+        .l-header__container {
+            max-width: variables.$breakpoint-pc;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            h2 {
+                display: inline-block;
+                color: var(--color-black);
+                font-size: var(--f1);
+            }
+            .l-header__message {
+                font-size: var(--f-1);
+                color: var(--color-brown);
+                display: inline-block;
+                text-align: left;
+                padding-top: 50px;
+            }
+            .l-header__contact {
+                padding-top: 25px;
+                .l-header__address {
+                    text-align: left;
+                }
+            }
+            .l-header__logo {
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+
+        .l-header__nav {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: variables.$breakpoint-pc;
+            height: 50px;
+            color: var(--color-white);
+            background-color: var(--color-brown);
+            font-size: var(--f0);
+            ul {
+                display: flex;
+                justify-content: space-around;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                li {
+                    a {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+    }
+}

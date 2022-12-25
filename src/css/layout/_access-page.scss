@@ -1,0 +1,52 @@
+@use '../variables/variables' as variables;
+@use '../functions/functions' as functions;
+
+#access {
+    .l-guide {
+        margin-bottom: functions.rem(30);
+        a {
+            cursor: pointer;
+            h2 {
+                font-size: clamp(var(--f2), 1.3239rem + 0.7512vw, var(--f3));
+                color: var(--color-brown);
+                text-align: center;
+                margin-bottom: functions.rem(30);
+                margin-top: functions.rem(30);
+            }
+        }
+        h3 {
+            font-size: clamp(var(--f1), 0.9930rem + 0.5634vw, var(--f2));
+            color: var(--color-brown);
+            text-align: center;
+            margin-bottom: functions.rem(30);
+        }
+        p {
+            text-align: center;
+            font-size: var(--f0);
+            color: var(--color-black);
+            margin-bottom: functions.rem(30);
+        }
+        .l-guide__container {
+            width: functions.rem(345);
+            margin: 0 auto;
+        }
+        @media screen and (min-width: variables.$breakpoint) { 
+            margin-bottom: functions.rem(60);
+            a {
+                h2 {
+                    margin-bottom: functions.rem(60);
+                    margin-top: functions.rem(60);
+                }
+            }
+            .l-guide__container {
+                width: functions.rem(800);
+            }
+        }
+    }
+    .l-access {
+        @media screen and (min-width: variables.$breakpoint) { 
+            padding-top: functions.rem(920);
+            padding-bottom: functions.rem(600);
+        }
+    }
+}

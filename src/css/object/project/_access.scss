@@ -1,0 +1,154 @@
+@use '../../variables/variables' as variables;
+@use '../../functions/functions' as functions;
+
+.p-access__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: functions.rem(60);
+    .p-access__text--left, .p-access__text-right {
+        p {
+            font-size: clamp(var(--f0), 0.9560rem + 0.1878vw, var(--f1));
+            color: var(--color-black);
+            text-align: left;
+        }
+        
+    }
+    @media screen and (min-width: variables.$breakpoint) { 
+        width: functions.rem(900);
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.p-access__schedule {
+    h2 {
+        font-size: clamp(var(--f1), 0.9930rem + 0.5634vw, var(--f2));
+        color: var(--color-brown);
+        text-align: center;
+        margin-top: functions.rem(30);
+        margin-bottom: functions.rem(30);
+    }
+    .p-access__schedule--container {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        padding: 0;
+        color: var(--color-pink);
+        background-color: var(--color-white);
+        width: functions.rem(345);
+        height: functions.rem(120);
+        display: flex;
+        flex-direction: column;
+        padding-left: functions.rem(5);
+        gap: functions.rem(5);
+        .p-access__table--row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            gap: functions.rem(14);
+            .p-access__table--cell:first-child {
+                width: functions.rem(110);
+                height: functions.rem(24);
+                white-space: nowrap;
+                padding-right: functions.rem(18);
+                margin-bottom: functions.rem(14);
+            }
+            .p-access__table--cell:not(:first-child) {
+                width: functions.rem(14);
+                height: functions.rem(21);
+                    .p-access__table--icon01 {
+                        display: block;
+                        background-image: url("../images/p-access__table--icon01.svg");
+                        width: functions.rem(14);
+                        height: functions.rem(23);
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                        margin: 0 auto;
+                    }
+                    .p-access__table--icon02 {
+                        display: block;
+                        background-image: url("../images/p-access__table--icon02.svg");
+                        width: functions.rem(14);
+                        height: functions.rem(23);
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                        margin: 0 auto;
+                    }
+            }
+            .p-access__table--cell:last-child {
+                width: functions.rem(45);
+            }
+            .p-access__table--cell {
+                font-size: clamp(var(--f-1), 0.8310rem + 0.1878vw, var(--f0));
+            }
+        }
+        .p-access__table--row:not(:last-child)::after {
+            content: '';
+            width: functions.rem(345);
+            height: 2px;
+            background-image: url("../images/p-access__border.png");
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            position: absolute;
+            top: functions.rem(40);
+            left: 0;
+        }
+        .p-access__table--row:nth-child(2)::after {
+            top: functions.rem(80);
+        }
+    }
+    @media screen and (min-width: variables.$breakpoint) { 
+        margin-top: functions.rem(60);
+        margin-bottom: functions.rem(60);
+        h2 {
+            margin-top: functions.rem(60);
+            margin-bottom: functions.rem(60);
+        }
+        .p-access__schedule--container {
+            width: functions.rem(600);
+            height: functions.rem(145);
+            padding-left: functions.rem(50);
+            gap: functions.rem(20);
+            .p-access__table--row {
+                gap: functions.rem(30);
+                 .p-access__table--cell:first-child {
+                    width: functions.rem(125);
+                    height: functions.rem(26);
+                    margin: 0;
+                    padding: 0;
+                 }
+                 .p-access__table--cell:not(:first-child) {
+                    width: functions.rem(16);
+                    height: functions.rem(26);
+                    .p-access__table--icon01 { 
+                        width: functions.rem(16);
+                        height: functions.rem(26);
+                    }
+                    .p-access__table--icon02 { 
+                        width: functions.rem(16);
+                        height: functions.rem(26);
+                    }
+                 }
+                .p-access__table--cell:last-child {
+                    width: functions.rem(60);
+                }
+            }
+            .p-access__table--row:not(:last-child) {
+                padding-top: functions.rem(6);
+            }
+            .p-access__table--row:not(:last-child)::after {
+                width: 100%;
+            }
+            .p-access__table--row:not(:last-child)::after {
+                top: functions.rem(45);
+            }
+            .p-access__table--row:nth-child(2)::after {
+                top: functions.rem(90);
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@use '../../variables/variables' as variables;
+
+.u-sponly {
+    display: block;
+    @media screen and (min-width: variables.$breakpoint) {
+        display: none;
+    }
+}
+
+.u-pconly {
+    display: none;
+    @media screen and (min-width: variables.$breakpoint) {
+        display: inline-block;
+    }
+}

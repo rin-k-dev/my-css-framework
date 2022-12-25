@@ -1,0 +1,33 @@
+@use '../../variables/variables' as variables;
+@use '../../functions/functions' as functions;
+
+
+.p-doctor__photo {
+    margin: 0 auto functions.rem(30);
+    width: functions.rem(345);
+}
+
+.p-doctor__history--text, .p-doctor__society--text, .p-doctor__greeting--text {
+    text-align: center;
+    width: functions.rem(345);
+    margin: 0 auto;
+    p {
+        text-align: left;
+    }
+}
+
+.p-doctor__greeting--text {
+    strong {
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: variables.$breakpoint) { 
+    .p-doctor__photo {
+        margin-bottom: functions.rem(60);
+        width: functions.rem(800);
+    }
+    .p-doctor__history--text, .p-doctor__society--text, .p-doctor__greeting--text {
+         width: functions.rem(800);
+    }
+}

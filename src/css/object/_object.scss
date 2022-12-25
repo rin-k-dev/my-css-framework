@@ -1,0 +1,5 @@
+@use 'sass:meta';
+
+@include meta.load-css('component/component');
+@include meta.load-css('project/project');
+@include meta.load-css('utility/utility');

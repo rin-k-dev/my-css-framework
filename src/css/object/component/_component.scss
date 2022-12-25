@@ -1,0 +1,5 @@
+@use 'sass:meta';
+
+@include meta.load-css('button');
+@include meta.load-css('link');
+@include meta.load-css('logo');

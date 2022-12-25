@@ -1,0 +1,36 @@
+:root {
+  /**
+   * Colors
+   */
+  --color-white: #fff;
+  --color-black: #333;
+  --color-gray: #f2f2f2;
+  --color-gray-2: #707070;
+  --color-purple: #b791d7;
+  --color-brown: #b5a989;
+  --color-pink: #EA9CB3;
+
+  /**
+   * Font size level.
+   */
+  --base-font-size: 16;
+  --f-1: 0.875rem; // 14px
+  --f0: 1rem; // 16px
+  --f1: 1.125rem; // 18px
+  --f2: 1.5rem; // 24px
+  --f3: 2rem; // 32px
+  --f4: 3rem; // 48px
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-gray);
+  font-family: tbudgothic-std, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.7;
+}
+
+p, span {
+  font-size: var(--f0);
+}

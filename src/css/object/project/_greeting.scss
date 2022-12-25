@@ -1,0 +1,14 @@
+@use '../../variables/variables' as variables;
+@use '../../functions/functions' as functions;
+
+.p-greeting__text {
+    p {
+        color: var(--color-white);
+        font-size: clamp(var(--f0), 0.9560rem + 0.1878vw, var(--f1));
+        text-align: left;
+        @media screen and (min-width: variables.$breakpoint) { 
+            margin-left: functions.rem(534);
+            margin-top: functions.rem(-350);
+        }
+    }
+}

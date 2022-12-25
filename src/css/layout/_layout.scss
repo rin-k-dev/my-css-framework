@@ -1,0 +1,9 @@
+@use 'sass:meta';
+
+@include meta.load-css('header');
+@include meta.load-css('main');
+@include meta.load-css('footer');
+@include meta.load-css('about-page');
+@include meta.load-css('information-page');
+@include meta.load-css('first-page');
+@include meta.load-css('access-page');

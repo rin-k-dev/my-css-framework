@@ -1,0 +1,24 @@
+@use '../../variables/variables' as variables;
+@use '../../functions/functions' as functions;
+
+
+.p-guide__item {
+    .p-guide__picture--container {
+        img {
+            width: functions.rem(345);
+            height: functions.rem(300);
+            @media screen and (min-width: variables.$breakpoint) {
+                width: functions.rem(800);
+            }
+        }
+    }
+    h4 {
+        font-size: var(--f1);
+        background-color: var(--color-brown);
+        color: var(--color-white);
+        width: functions.rem(315);
+        position: relative;
+        top: functions.rem(-60);
+        left: functions.rem(15);
+    }
+}

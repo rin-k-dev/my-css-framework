@@ -1,0 +1,50 @@
+@use '../../variables/variables' as variables;
+@use '../../functions/functions' as functions;
+
+.p-features__image--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: functions.rem(30);
+    margin-left: auto;
+    margin-right: auto;
+    .p-feature {
+        img {
+            width: functions.rem(345);
+            height: functions.rem(250);
+        }
+        h3 {
+            font-size: clamp(var(--f1), 0.9930rem + 0.5634vw, var(--f2));
+            width: functions.rem(320);
+            height: functions.rem(40);
+            background-color: var(--color-brown);
+            color: var(--color-white);
+            text-align: left;
+            padding-top: functions.rem(6);
+            padding-left: functions.rem(8);
+            position: relative;
+            top: functions.rem(-70);
+            left: functions.rem(15);
+        }
+    }
+     @media screen and (min-width: variables.$breakpoint) { 
+        width: 100%;
+        display: grid;
+        grid-template-columns: functions.rem(500) functions.rem(500);
+        gap: functions.rem(20);
+        margin-top: functions.rem(280);
+        .p-feature {
+            img {
+                width: functions.rem(500);
+                height: functions.rem(300);
+            }
+            h3 {
+                width: functions.rem(425);
+                height: functions.rem(50);
+                padding-top: functions.rem(5);
+                padding-left: functions.rem(12);
+            }
+        }
+     }
+}

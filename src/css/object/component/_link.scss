@@ -1,0 +1,27 @@
+@use '../../variables/variables' as variables;
+@use '../../functions/functions' as functions;
+
+.c-features__links--button {
+    color: var(--color-white);
+    background-color: var(--color-pink);
+    width: functions.rem(345);
+    height: functions.rem(95);
+    text-align: center;
+    font-size: var( --f2);
+    margin-left: auto;
+    margin-right: auto;
+    a {
+        display: inline-block;
+        width: 100%;
+        height: functions.rem(95);
+        cursor: pointer;
+        padding-top: functions.rem(28);
+    }
+    @media screen and (min-width: variables.$breakpoint) { 
+        width: functions.rem(500);
+        margin: 0;
+        a {
+            padding-top: functions.rem(31);
+        }
+    }
+}

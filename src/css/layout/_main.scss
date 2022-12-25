@@ -1,0 +1,212 @@
+@use '../variables/variables' as variables;
+@use '../functions/functions' as functions;
+
+.l-hero {
+    .l-hero-container {
+        width: 100%;
+        background-image: url("../images/main-visual-bg-sp.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+        padding-bottom: functions.rem(120);
+        h2 {
+            picture {
+                img {
+                    width: functions.rem(230);
+                    margin-top: functions.rem(30);
+                }
+            }
+        }
+        @media screen and (min-width: variables.$breakpoint) { 
+            max-width: variables.$breakpoint-pc;
+            margin: 0 auto;
+            background-image: url("../images/main-visual-bg.png");
+            padding-bottom: functions.rem(240);
+            h2 {
+                picture {
+                    img {
+                        width: functions.rem(588);
+                        margin-top: functions.rem(60);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.l-information {
+    max-width: variables.$breakpoint-pc;
+    margin-left: auto;
+    margin-right: auto;
+    .l-information__container {
+        width: 100%;
+        background-image: url("../images/information-bg-sp.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-top: functions.rem(-120);
+        padding-top: functions.rem(120);
+        padding-bottom: functions.rem(180);
+        @media screen and (min-width: variables.$breakpoint) { 
+            background-image: url("../images/information-bg.png");
+            margin-top: functions.rem(0);
+            padding-top: functions.rem(0);
+            padding-bottom: functions.rem(400);
+            position: relative;
+            top: functions.rem(-410);
+        }
+    }
+}
+
+.l-greeting {
+    max-width: variables.$breakpoint-pc;
+    margin-left: auto;
+    margin-right: auto;
+    .l-greeting__container {
+        width: 100%;
+        background-image: url("../images/greeting-bg-sp.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-top: functions.rem(-120);
+        padding-top: functions.rem(120);
+        padding-left: functions.rem(15);
+        padding-right: functions.rem(15);
+        padding-bottom: functions.rem(120);
+        h2 {
+            font-size: clamp(var(--f1), 0.9930rem + 0.5634vw, var(--f2));
+            color: var(--color-white);
+            text-align: center;
+            a {
+                cursor: pointer;
+            }
+        }
+        .l-greeting__picture {
+            text-align: center;
+            picture {
+                img {
+                    width: 150px;
+                    height: 180px;
+                    margin-top: functions.rem(30);
+                    margin-bottom: functions.rem(50);
+                }
+            }
+        }
+        
+        @media screen and (min-width: variables.$breakpoint) { 
+            background-image: url("../images/greeting-bg.png");
+            margin-top: functions.rem(0);
+            padding-top: functions.rem(0);
+            padding-left: functions.rem(30);
+            padding-right: functions.rem(30);
+            padding-bottom: functions.rem(360);
+            position: relative;
+            top: functions.rem(-630);
+            h2 {
+                position: relative;
+                top: functions.rem(200);
+
+            }
+            .l-greeting__picture {
+                text-align: start;
+                picture {
+                    img {
+                        width: 294px;
+                        height: 416px;
+                        margin: 0;
+                        margin-left: functions.rem(150);
+                        margin-top: functions.rem(270);
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+.l-features {
+    max-width: variables.$breakpoint-pc;
+    margin-left: auto;
+    margin-right: auto;
+    .l-features__container {
+        width: 100%;
+        background-image: url("../images/feature-bg-sp.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-top: functions.rem(-120);
+        padding-top: functions.rem(120);
+        padding-left: functions.rem(15);
+        padding-right: functions.rem(15);
+        padding-bottom: functions.rem(120);
+        h2 {
+            font-size: clamp(var(--f1), 0.9930rem + 0.5634vw, var(--f2));
+            color: var(--color-brown);
+            text-align: center;
+            a {
+                cursor: pointer;
+            }
+        }
+        @media screen and (min-width: variables.$breakpoint) { 
+            background-image: url("../images/feature-bg.png");
+            margin-top: functions.rem(0);
+            padding-top: functions.rem(0);
+            padding-left: functions.rem(30);
+            padding-right: functions.rem(30);
+            padding-bottom: functions.rem(240);
+            position: relative;
+            top: functions.rem(-900);
+            h2 {
+                position: relative;
+                top: functions.rem(200);
+            }
+        }
+    }
+    .l-features__links {
+        display: flex;
+        flex-direction: column;
+        gap: functions.rem(30);
+        margin-top: functions.rem(60);
+        @media screen and (min-width: variables.$breakpoint) { 
+            flex-direction: row;
+            gap: functions.rem(20);
+            justify-content: space-around;
+            margin-top: functions.rem(120);          
+        }
+    }
+}
+
+.l-access {
+    max-width: variables.$breakpoint-pc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: functions.rem(30);
+    @media screen and (min-width: variables.$breakpoint) { 
+        height: functions.rem(600);
+    }
+    .l-access__container {
+        padding-left: functions.rem(15);
+        padding-right: functions.rem(15);
+        padding-top: 0;
+        padding-bottom: functions.rem(0);
+        iframe {
+            width: functions.rem(345);
+            height: functions.rem(300);
+            margin-top: functions.rem(30);
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        @media screen and (min-width: variables.$breakpoint) { 
+            position: relative;
+            top: functions.rem(-900);
+            iframe {
+                width: functions.rem(900);
+                height: functions.rem(500);
+                margin-top: functions.rem(60);
+                margin-bottom: functions.rem(60);
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+

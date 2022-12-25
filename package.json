@@ -1,0 +1,14 @@
+{
+  "name": "my-css-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css:app": "sass --no-source-map src/css/app.scss:assets/css/app.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}

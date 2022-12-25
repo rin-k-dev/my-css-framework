@@ -1,0 +1,47 @@
+@use '../../variables/variables' as variables;
+@use '../../functions/functions' as functions;
+
+.p-information {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-bottom: functions.rem(20);
+    width: functions.rem(345);
+    background-color: var(--color-white);
+    border-radius: functions.rem(20);
+    h2 {
+        font-size: clamp(var(--f1), 0.9930rem + 0.5634vw, var(--f2));
+        color: var(--color-brown);
+        text-align: center;
+        margin-bottom: functions.rem(30);
+    }
+    .p-information__text {
+        padding-left: functions.rem(9);
+        dl {
+            display: flex;
+            font-size: var( --f-1);
+            gap: functions.rem(20);
+            margin-bottom: functions.rem(20);
+        }
+    }
+
+    @media screen and (min-width: variables.$breakpoint) { 
+        margin-top:  functions.rem(200);
+        padding-top: functions.rem(30);
+        width: functions.rem(690);
+        height: functions.rem(390);
+        position: relative;
+        top: functions.rem(200);
+        h2 {
+            margin-bottom: functions.rem(60);
+        }
+        .p-information__text {
+            padding-left: functions.rem(53);
+            dl {
+                margin-bottom: functions.rem(20);
+                gap: functions.rem(80);
+            }
+        }
+        
+    }
+}

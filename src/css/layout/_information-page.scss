@@ -1,0 +1,41 @@
+@use '../variables/variables' as variables;
+@use '../functions/functions' as functions;
+
+#information {
+    .l-information {
+        margin-bottom: functions.rem(30);
+        a {
+            cursor: pointer;
+            h2 {
+                font-size: clamp(var(--f2), 1.3239rem + 0.7512vw, var(--f3));
+                color: var(--color-brown);
+                text-align: center;
+                margin-top: functions.rem(30);
+                margin-bottom: functions.rem(30);
+            }
+        }
+        h3 {
+            font-size: clamp(var(--f1), 0.9930rem + 0.5634vw, var(--f2));
+            color: var(--color-black);
+            text-align: center;
+            margin-bottom: functions.rem(30);
+        }
+        @media screen and (min-width: variables.$breakpoint) { 
+            a {
+                h2 {
+                    margin-top: functions.rem(60);
+                    margin-bottom: functions.rem(60);
+                }
+            }
+            h3 {
+                margin-bottom: functions.rem(60);
+            }
+        }
+    }
+    .l-access {
+        @media screen and (min-width: variables.$breakpoint) { 
+            padding-top: functions.rem(920);
+            padding-bottom: functions.rem(600);
+        }
+    }
+}

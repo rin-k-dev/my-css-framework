@@ -1,0 +1,10 @@
+@use 'sass:meta';
+
+@include meta.load-css('information');
+@include meta.load-css('greeting');
+@include meta.load-css('features');
+@include meta.load-css('access');
+@include meta.load-css('about-page');
+@include meta.load-css('information-page');
+@include meta.load-css('first-page');
+@include meta.load-css('access-page');

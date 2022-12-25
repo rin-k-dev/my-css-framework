@@ -1,0 +1,14 @@
+@use '../../variables/variables' as variables;
+@use '../../functions/functions' as functions;
+
+.p-information__psychiatry--text, .p-information__psychosomatic--text {
+    width: functions.rem(345);
+    margin: 0 auto;
+    text-align: center;
+    p {
+        text-align: left;
+    }
+    @media screen and (min-width: variables.$breakpoint) { 
+        width: functions.rem(800);
+    }
+}
